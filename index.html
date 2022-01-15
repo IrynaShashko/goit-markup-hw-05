@@ -41,7 +41,7 @@
         <section class="title main-hero-studio">
             <div class="container">
                 <h1 class="main-hero-title-studio">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-                <button class="main-hero-btn-studio" type="button">Заказать услугу</button>
+                <button class="main-hero-btn-studio" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
         <section class="info">
@@ -99,9 +99,24 @@
                 <div class="container">
                 <h2 class="studio-title-about">Чем мы занимаемся</h2>
                 <ul class="list img-list-studio">
-                    <li class="img-studio"><img src="./images/img-one.jpg" alt="пишет код" width="370"/></li>
-                    <li class="img-studio"><img src="./images/img-two.jpg" alt="стили" width="370"/></li>
-                    <li class="img-studio"><img src="./images/img-three.jpg" alt="рисует" width="370"/></li>
+                    <li class="img-studio">
+                        <div class="work-img">
+                            <img src="./images/img-one.jpg" alt="пишет код" width="370"/>
+                            <p class="work-img-text">Десктопные приложения</p>
+                        </div>
+                    </li>
+                    <li class="img-studio">
+                        <div class="work-img">
+                            <img src="./images/img-two.jpg" alt="стили" width="370"/>
+                            <p class="work-img-text">Мобильные приложения</p>
+                        </div>
+                    </li>
+                    <li class="img-studio">
+                        <div class="work-img">
+                            <img src="./images/img-three.jpg" alt="рисует" width="370"/>
+                            <p class="work-img-text">Дизайнерские решения</p>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -360,5 +375,15 @@
                 </div>
             </address>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="button modal-close" data-modal-close>
+                <svg class="" width="18" height="18">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

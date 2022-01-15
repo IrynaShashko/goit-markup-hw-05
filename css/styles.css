@@ -13,7 +13,10 @@
     --footer-color: #2F303A;
     --color-section: #F5F4FA;
     --color-btn: #ffffff;
+}
 
+:root {
+    --timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 body {
@@ -65,12 +68,11 @@ img {
     clip: rect(0 0 0 0)
 }
 
-/*.................................................... HEADER............................................ */
-.header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+.button {
+    cursor: pointer;
 }
 
+/*.................................................... HEADER............................................ */
 .header-list {
     font-weight: 500;
     font-size: 14px;
@@ -100,6 +102,8 @@ img {
 .header-nav .link:hover,
 .header-nav .link:focus {
     color: var(--color-active);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .header-nav .link:active {
@@ -108,6 +112,22 @@ img {
 
 .header-nav-link {
     margin-right: 50px;
+    position: relative;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.nav-link.current::after {
+    content: "";
+    display: block;
+    background: #2196F3;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: opasity 250ms var(--timing-function);
 }
 
 .header-list .header-nav-link:last-child {
@@ -125,6 +145,8 @@ img {
 .contacts:hover,
 .contacts:focus {
     color: var(--color-active);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .header-social-icon {
@@ -158,6 +180,7 @@ img {
     display: flex;
     align-items: center;
 }
+
 
 /*.................................................... FOOTER............................................ */
 .footer {
@@ -265,12 +288,16 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
     background-color: var(--color-active);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
     background-color: var(--color-active);
     color: var(--color-btn);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .footer-social-list .footer-social-item+.footer-social-item {
@@ -367,6 +394,8 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .main-hero-btn-studio {
@@ -395,6 +424,32 @@ img {
 .main-hero-studio {
     padding-top: 200px;
     padding-bottom: 200px;
+}
+
+.hero-img-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(33, 150, 243, 0.9);
+    padding: 63px 24px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: var(--color-btn);
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms var(--timing-function);
+}
+
+.hero-img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-item:hover .hero-img-text {
+    transform: translateY(0%);
 }
 
 /*.................................................... TEAM.............................................. */
@@ -481,6 +536,8 @@ img {
 .team-social-link:focus {
     background-color: var(--color-active);
     color: var(--color-btn);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .team-social-item+.team-social-item {
@@ -550,12 +607,52 @@ img {
     padding-bottom: 94px;
 }
 
+.work-img {
+    position: relative;
+
+}
+
+.work-img-text {
+    position: absolute;
+    background: rgba(47, 48, 58, 0.8);
+    left: 0;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-btn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 /*.................................................... HERO PORTFOLIO............................................ */
 .hero-card {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-right: 24px;
     padding-left: 24px;
+}
+
+.hero-list-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: var(--main-text-color);
+    margin-bottom: 4px;
+}
+
+.hero-list-after-title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: var(--second-text-color);
 }
 
 .hero-list-btn {
@@ -643,4 +740,46 @@ img {
 .client-list-link:focus {
     color: var(--color-active);
     border-color: var(--color-active);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal {
+    width: 528px;
+    min-height: 581px;
+    background: var(--color-btn);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
+}
+
+.modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 6px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
