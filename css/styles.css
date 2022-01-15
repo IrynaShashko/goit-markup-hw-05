@@ -73,6 +73,11 @@ img {
 }
 
 /*.................................................... HEADER............................................ */
+/* .header{
+    position: fixed;
+    width: 100%;
+    background-color: var(--color-btn);
+} */
 .header-list {
     font-weight: 500;
     font-size: 14px;
@@ -97,13 +102,13 @@ img {
     font-weight: 500;
     letter-spacing: 0.02em;
     display: block;
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .header-nav .link:hover,
 .header-nav .link:focus {
     color: var(--color-active);
-    transition-duration: 250ms;
-    transition-property: var(--timing-function);
 }
 
 .header-nav .link:active {
@@ -136,6 +141,8 @@ img {
 
 .contacts {
     color: var(--second-text-color);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .header-social-icon {
@@ -145,8 +152,6 @@ img {
 .contacts:hover,
 .contacts:focus {
     color: var(--color-active);
-    transition-duration: 250ms;
-    transition-property: var(--timing-function);
 }
 
 .header-social-icon {
@@ -279,6 +284,8 @@ img {
     border-radius: 50%;
     color: var(--color-btn);
     background: rgba(255, 255, 255, 0.1);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .footer-social-icon {
@@ -288,16 +295,12 @@ img {
 .footer-social-link:hover,
 .footer-social-link:focus {
     background-color: var(--color-active);
-    transition-duration: 250ms;
-    transition-property: var(--timing-function);
 }
 
 .footer-social-link:hover,
 .footer-social-link:focus {
     background-color: var(--color-active);
     color: var(--color-btn);
-    transition-duration: 250ms;
-    transition-property: var(--timing-function);
 }
 
 .footer-social-list .footer-social-item+.footer-social-item {
@@ -375,6 +378,8 @@ img {
     letter-spacing: 0.03em;
     border: none;
     padding: 6px 22px;
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .hero {
@@ -394,8 +399,6 @@ img {
     text-align: center;
     letter-spacing: 0.03em;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition-duration: 250ms;
-    transition-property: var(--timing-function);
 }
 
 .main-hero-btn-studio {
@@ -413,6 +416,8 @@ img {
     height: 50px;
     left: 700px;
     top: 430px;
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .main-hero-btn-studio:hover,
@@ -526,6 +531,8 @@ img {
     align-items: center;
     border-radius: 50%;
     color: rgba(175, 177, 184, 1);
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .team-social-icon {
@@ -536,8 +543,6 @@ img {
 .team-social-link:focus {
     background-color: var(--color-active);
     color: var(--color-btn);
-    transition-duration: 250ms;
-    transition-property: var(--timing-function);
 }
 
 .team-social-item+.team-social-item {
@@ -550,9 +555,6 @@ img {
 }
 
 /*.................................................... INFO............................................ */
-
-
-
 .info-li-title:nth-child(1):before {
     background-image: url(../images/antenna.svg);
     background-size: 70px;
@@ -669,6 +671,8 @@ img {
     background: var(--color-btn);
     border: 1px solid #EEEEEE;
     width: 370px;
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .hero-item:hover,
@@ -730,6 +734,8 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: 250ms;
+    transition-property: var(--timing-function);
 }
 
 .client-social-icon {
@@ -740,8 +746,6 @@ img {
 .client-list-link:focus {
     color: var(--color-active);
     border-color: var(--color-active);
-    transition-duration: 250ms;
-    transition-property: var(--timing-function);
 }
 
 .backdrop {
